@@ -26,14 +26,18 @@ footer {
 #colsx {
     width: 250px;
     height: calc(100vh - 100px);
-    /* debug */
     background-color: black;
+    padding: 20px;
+}
+#colsx img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
 }
 #coldx {
     width: calc(100vw - 250px);
     height: calc(100vh - 100px);
     overflow-y: auto;
-    /* debug */
     background-color: #141922;
 }
 #calltoaction {
