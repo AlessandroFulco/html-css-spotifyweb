@@ -26,6 +26,9 @@ a {
     color: #fff;
     text-decoration: none;
 }
+ul li {
+    list-style-type: none;
+}
 .container.main {
     display: flex;
 }
@@ -49,8 +52,6 @@ a {
 }
 #colsx nav ul li {
     margin-bottom: 15px;
-    list-style: none;
-
 }
 #colsx nav ul li a i {
     width: 25px;
@@ -127,7 +128,20 @@ a {
     padding: 15px 15px;
     border-radius: 30px;
 }
-
-
-
+#coldx nav ul {
+    display: flex;
+    height: 60px;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+}
+#coldx nav ul li a {
+    line-height: 50px;
+    padding: 20px 0;
+}
+#coldx nav ul li .here {
+    border-top: 3px solid green;
+    width: 50px;
+    margin: 0 auto;
+}
 
