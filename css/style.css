@@ -21,6 +21,10 @@ footer {
 .container {
     display: flex;
 }
+a {
+    color: #fff;
+    text-decoration: none;
+}
 /* regole main */
 /* sidebar sx */
 #colsx {
@@ -34,6 +38,22 @@ footer {
     height: auto;
     margin-bottom: 20px;
 }
+#colsx nav ul li a i {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+#colsx nav ul li {
+    margin: 10px 0;
+}
+
+
+
+
+
+
 #coldx {
     width: calc(100vw - 250px);
     height: calc(100vh - 100px);
