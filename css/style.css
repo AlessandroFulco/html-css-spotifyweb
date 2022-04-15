@@ -9,14 +9,10 @@ body {
 main {
     width: 100%;
     height: calc(100vh - 100px);
-    /* debug */
-    background-color: red;
 }
 footer {
     width: 100%;
     height: 100px;
-
-    /* debug */
     background-color: #282828;
 }
 a {
@@ -32,7 +28,7 @@ ul li {
 }
 /* regole main */
 /* colsx */
-#colsx {
+.colsx {
     width: 250px;
     height: calc(100vh - 100px);
     background-color: black;
@@ -42,19 +38,19 @@ ul li {
     height: calc(100vh - 75vh);
     mn-heighti: 200px;
 }
-#colsx .container.logo-nav ul li.here {
+.colsx .container.logo-nav ul li.here {
     border-left: 3px solid  #8aca2c;
 }
-#colsx img {
+.colsx img {
     width: 170px;
     height: auto;
     padding: 20px;
 }
-#colsx ul li {
+.colsx ul li {
     margin-bottom: 15px;
     padding: 0 20px;
 }
-#colsx ul li a i {
+.colsx ul li a i {
     width: 25px;
     height: 25px;
     font-size: 25px;
@@ -107,7 +103,7 @@ ul li {
     padding: 10px 0;
 }
 /* coldx */
-#coldx {
+.coldx {
     width: calc(100vw - 250px);
     height: calc(100vh - 100px);
     overflow-y: auto;
@@ -128,17 +124,17 @@ ul li {
     padding: 15px 15px;
     border-radius: 30px;
 }
-#coldx nav ul {
+.coldx nav ul {
     display: flex;
     justify-content:center;
     align-items: center;
     gap: 30px;
 }
-#coldx nav ul li a {
+.coldx nav ul li a {
     line-height: 56px;
     height: 50px;
 }
-#coldx nav ul li div.here {
+.coldx nav ul li div.here {
     border-top: 3px solid #8aca2c;
     width: 40px;
     margin: 0 auto;
@@ -153,9 +149,12 @@ ul li {
     display: flex;
     /* flex-wrap: wrap; */
 }
+.row {
+    width: 100%;
+}
 .row .album-song {
     text-align: center;
-    width: 240px;
+    width: calc(100% / 7 );
     margin-right: 20px;
 }
 #recenti img, #created img, #popular-artist img {
@@ -171,4 +170,42 @@ ul li {
 /* popular artist */
 #popular-artist .album-song img {
     border-radius: 50%;
+}
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: #fff;
+}
+footer .player-left {
+    background-color: blueviolet;
+    border: 3px solid green
+}
+footer .container.left {
+    display: flex;
+    align-items: center;
+}
+footer .player-left img {
+    width: 45px;
+    height: auto;
+}
+
+
+
+
+
+footer .player-center {
+    height: 60px;
+    /* width: 200px; */
+    background-color: blue;
+    border: 3px solid green
+}
+
+footer .player-right {
+    height: 60px;
+    /* width: 200px; */
+    background-color: red;
+    border: 3px solid green
 }
