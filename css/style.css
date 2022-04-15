@@ -92,8 +92,12 @@ ul li {
 #new-playlist a .btn.plus i {
     font-size: 22px;
 }
-#playlist .playlst-name {
-    padding: 10px 0;
+#playlist ul {
+    list-style-type: none;
+}
+#playlist ul li {
+    padding: 0;
+    margin-bottom: 20px;
 }
 #download div:first-child {
     border-bottom: 1px solid #ccc;
@@ -202,24 +206,52 @@ footer #player-action  i {
     margin-right: 10px;
 }
 /* container center */
-footer .player-center {
-    background-color: blue;
-    border: 3px solid green
+footer .player-center #row-up {
+    text-align: center;
 }
 footer .player-center #row-up i {
     margin: 0 20px;
     font-size: 24px;
 }
-
-
-
-
-
-
+footer .player-center #row-down {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#full-time {
+    border-radius: 3px;
+    margin: 0 30px;
+    width: 400px;
+    height: 5px;
+    background-color: #ccc;
+}
+#actual-time {
+    height: 5px;
+    width: 80px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+footer .time {
+    font-size: 12px;
+}
 /* container right */
 footer .player-right {
-    height: 60px;
-    /* width: 200px; */
-    background-color: red;
-    border: 3px solid green
+    display: flex;
+    align-items: center;
+}
+footer .player-right i {
+    margin-right: 15px;
+}
+footer #volume {
+    width: 100px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+footer #volume-actual {
+    width: 30px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #fff;
 }
