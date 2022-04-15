@@ -36,7 +36,6 @@ ul li {
 }
 .container.logo-nav {
     height: calc(100vh - 75vh);
-    mn-heighti: 200px;
 }
 .colsx .container.logo-nav ul li.here {
     border-left: 3px solid  #8aca2c;
@@ -85,12 +84,12 @@ ul li {
 }
 #new-playlist a {
     display: flex;
-    color: #000;
     display: flex;
     align-items: center;
 }
 #new-playlist a .btn.plus i {
     font-size: 22px;
+    color: #000;
 }
 #playlist ul {
     list-style-type: none;
@@ -105,6 +104,15 @@ ul li {
 }
 #download div:last-child {
     padding: 10px 0;
+}
+#download #user a {
+    color: #fff;
+    font-weight: bold;
+}
+#download #user a i {
+    font-size: 22px;
+    vertical-align: middle;
+    line-height: 22px
 }
 /* coldx */
 .coldx {
@@ -137,6 +145,7 @@ ul li {
 .coldx nav ul li a {
     line-height: 56px;
     height: 50px;
+    font-weight: bold;
 }
 .coldx nav ul li div.here {
     border-top: 3px solid #8aca2c;
@@ -208,6 +217,8 @@ footer #player-action  i {
 /* container center */
 footer .player-center #row-up {
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 footer .player-center #row-up i {
     margin: 0 20px;
@@ -232,6 +243,24 @@ footer .player-center #row-down {
     background-color: #fff;
     border-radius: 3px;
 }
+#hovertime {
+    height: 5px;
+    width: 80px;
+    background-color: green;
+    border-radius: 3px;
+    position: relative;
+    display:  none;
+}
+.circle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+}
 footer .time {
     font-size: 12px;
 }
@@ -254,4 +283,9 @@ footer #volume-actual {
     height: 5px;
     border-radius: 3px;
     background-color: #fff;
+}
+
+/* regole hovered */
+a:hover {
+    color: #fff;
 }
