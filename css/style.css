@@ -365,7 +365,7 @@ a:hover {
         width: calc(50% - 20px);
     }
 }
-@media screen and (max-width: 552px){
+@media screen and (max-width: 570px){
     .colsx section {
         display: block;
     }
