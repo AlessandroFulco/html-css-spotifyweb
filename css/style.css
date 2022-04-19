@@ -14,6 +14,9 @@ footer {
     width: 100%;
     height: 100px;
     background-color: #282828;
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
 }
 a {
     color: #ccc;
@@ -35,7 +38,13 @@ ul li {
     color: #ccc;
 }
 .container.logo-nav {
-    height: calc(100vh - 75vh);
+margin-bottom: 30px;
+}
+.container.logo-nav ul li img {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    vertical-align: middle;
 }
 .colsx .container.logo-nav ul li.here {
     border-left: 3px solid  #8aca2c;
@@ -57,13 +66,14 @@ ul li {
     vertical-align: middle;
 }
 .container.sez-playlist {
-    height: calc(100vh - 25vh - 120px);
+    height: calc(100vh - 330px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0 20px;
 }
 #playlist {
+    /* margin-top: 20px; */
     overflow: auto;
 }
 #playlist h3 {
@@ -74,6 +84,7 @@ ul li {
     margin-bottom: 10px;
 }
 #new-playlist .btn.plus {
+    margin-top: 10px;
     margin-right: 5px;
     width: 40px;
     height: 40px;
@@ -93,6 +104,7 @@ ul li {
 }
 #playlist ul {
     list-style-type: none;
+    overflow: auto;
 }
 #playlist ul li {
     padding: 0;
@@ -109,10 +121,18 @@ ul li {
     color: #fff;
     font-weight: bold;
 }
-#download #user a i {
-    font-size: 22px;
+#download img {
+    padding: 0;
     vertical-align: middle;
-    line-height: 22px
+    width: 30px;
+    height: 30px;
+}
+#download  #user img {
+    background-color: #ccc;
+    border-radius: 50%;
+}
+.colsx section {
+    display: none
 }
 /* coldx */
 .coldx {
@@ -140,6 +160,7 @@ ul li {
     display: flex;
     justify-content:center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 .coldx nav ul li a {
@@ -230,6 +251,9 @@ footer #player-title h6 {
     color: #ccc;
     font-size: 10px;
 }
+footer #player-title h6:hover {
+    text-decoration: underline;
+}
 footer #player-action a {
     display: inline;
 }
@@ -237,13 +261,19 @@ footer #player-action  i {
     margin-right: 10px;
 }
 /* container center */
+footer .player-center {
+    width: 40%;
+}
 footer .player-center #row-up {
     text-align: center;
     display: flex;
     justify-content: center;
 }
 footer .player-center #row-up i {
-    margin: 0 20px;
+    color: #fff;
+}
+footer .player-center #row-up i {
+    margin: 0 10px;
     font-size: 24px;
 }
 footer .player-center #row-down {
@@ -255,7 +285,7 @@ footer .player-center #row-down {
 #full-time {
     border-radius: 3px;
     margin: 0 30px;
-    width: 400px;
+    width: 80%;
     height: 5px;
     background-color: #ccc;
 }
@@ -264,24 +294,24 @@ footer .player-center #row-down {
     width: 80px;
     background-color: #fff;
     border-radius: 3px;
-}
-#hovertime {
-    height: 5px;
-    width: 80px;
-    background-color: green;
-    border-radius: 3px;
     position: relative;
-    display:  none;
+}
+#actual-time:hover, #volume-actual:hover {
+    background-color: green;
 }
 .circle {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #ffff;
+    display: none;
+}
+#actual-time:hover .circle, #volume-actual:hover .circle {
+    display: block;
 }
 footer .time {
     font-size: 12px;
@@ -305,6 +335,7 @@ footer #volume-actual {
     height: 5px;
     border-radius: 3px;
     background-color: #fff;
+    position: relative;
 }
 
 /* regole hovered */
@@ -314,3 +345,54 @@ a:hover {
 
 
 
+
+/* media queries */
+@media screen and (max-width: 878px){
+    .row {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .row .album-song {
+        width: 115px;
+    }
+}
+@media screen and (max-width: 639px){
+    .row {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .row .album-song {
+        width: calc(50% - 20px);
+    }
+}
+@media screen and (max-width: 552px){
+    .colsx section {
+        display: block;
+    }
+    .colsx {
+        width: 70px;
+    }
+    .colsx {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .colsx img {
+        padding: 10px;
+        width: 65px;
+        height: 65px;
+    }
+    .colsx #user {
+        background-color: #ccc;
+        border-radius: 50%
+    }
+    .container .logo-nav {
+        display: none;
+    }
+    .container .sez-playlist {
+        display: none;
+    }
+    .coldx {
+        width: calc(100% - 70px);
+    }
+}
