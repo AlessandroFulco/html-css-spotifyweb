@@ -72,14 +72,6 @@ margin-bottom: 30px;
     justify-content: space-between;
     padding: 0 20px;
 }
-#playlist {
-    /* margin-top: 20px; */
-    overflow: auto;
-}
-#playlist h3 {
-    margin-bottom: 10px;
-    color: #fff;
-}
 #new-playlist {
     margin-bottom: 10px;
 }
@@ -101,6 +93,14 @@ margin-bottom: 30px;
 #new-playlist a .btn.plus i {
     font-size: 22px;
     color: #000;
+}
+#playlist {
+    margin-top: 20px;
+    overflow: auto;
+}
+#playlist h3 {
+    margin-bottom: 10px;
+    color: #fff;
 }
 #playlist ul {
     list-style-type: none;
@@ -368,11 +368,10 @@ a:hover {
 @media screen and (max-width: 570px){
     .colsx section {
         display: block;
+        text-align: center;
     }
     .colsx {
         width: 70px;
-    }
-    .colsx {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -384,7 +383,9 @@ a:hover {
     }
     .colsx #user {
         background-color: #ccc;
-        border-radius: 50%
+        border-radius: 50%;
+        width: 40px;
+        height: auto;
     }
     .container .logo-nav {
         display: none;
@@ -394,5 +395,11 @@ a:hover {
     }
     .coldx {
         width: calc(100% - 70px);
+    }
+    footer .player-center #row-up a i {
+        font-size: 14px;
+    }
+    footer .player-right i {
+        font-size: 12px;
     }
 }
